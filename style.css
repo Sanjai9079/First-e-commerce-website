@@ -57,7 +57,7 @@ body {
   justify-content: space-between;
   padding: 20px 80px;
   background: #000000;
-  box-shadow: 1px 20px 15px rgba(0, 0, 0, 0.6)
+  box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.6)
 }
 #navbar{
   display: flex;
@@ -68,6 +68,7 @@ body {
 #navbar li{
   list-style: none;
   padding: 0 20px;
+  position: relative;
 }
 #navbar li a{
   text-decoration: none;
@@ -76,6 +77,30 @@ body {
   color: #ffffff;
   transition: 0.3s ease;
 }
-#navbar li a:hover{
-  color: rgb(128, 123, 123);
+#navbar li a:hover,
+#navbar li a.active{
+  color: #088178;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #088178;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+#hero{
+  background-image: url(img/hero4.png);
+  height: 90vh;
+  width: 100%;
+  background-position: top 25% right 0;
+  background-size: cover;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
